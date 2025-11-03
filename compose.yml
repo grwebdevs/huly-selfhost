@@ -108,7 +108,7 @@ services:
       - DB_URL=${CR_DB_URL}
       - STORAGE_CONFIG=minio|minio?accessKey=minioadmin&secretKey=minioadmin
       - FRONT_URL=http://localhost:8087
-      - ACCOUNTS_URL=http://account:3000
+      - ACCOUNTS_URL=https://accounts.coolify.grwebdevs.com
       - FULLTEXT_URL=http://fulltext:4700
       - STATS_URL=http://stats:4900
       - LAST_NAME_FIRST=${LAST_NAME_FIRST:-true}
@@ -122,7 +122,7 @@ services:
     environment:
       - COLLABORATOR_PORT=3078
       - SECRET=${SECRET}
-      - ACCOUNTS_URL=http://account:3000
+      - ACCOUNTS_URL=https://accounts.coolify.grwebdevs.com
       - STATS_URL=http://stats:4900
       - STORAGE_CONFIG=minio|minio?accessKey=minioadmin&secretKey=minioadmin
     restart: unless-stopped
@@ -140,7 +140,7 @@ services:
       - FRONT_URL=http${SECURE:+s}://${HOST_ADDRESS}
       - STATS_URL=http${SECURE:+s}://${HOST_ADDRESS}/stats
       - MODEL_ENABLED=*
-      - ACCOUNTS_URL=http${SECURE:+s}://${HOST_ADDRESS}/_accounts
+      - ACCOUNTS_URL=https://accounts.coolify.grwebdevs.com
       - ACCOUNT_PORT=3000
       - QUEUE_CONFIG=redpanda:9092
     restart: unless-stopped
@@ -155,7 +155,7 @@ services:
       - TRANSACTOR_URL=ws://transactor:3333;ws${SECURE:+s}://${HOST_ADDRESS}/_transactor
       - STORAGE_CONFIG=minio|minio?accessKey=minioadmin&secretKey=minioadmin
       - MODEL_ENABLED=*
-      - ACCOUNTS_URL=http://account:3000
+      - ACCOUNTS_URL=https://accounts.coolify.grwebdevs.com
       - STATS_URL=http://stats:4900
       - QUEUE_CONFIG=redpanda:9092
       - ACCOUNTS_DB_URL=${CR_DB_URL}
@@ -170,7 +170,7 @@ services:
       - SERVER_SECRET=${SECRET}
       - LOVE_ENDPOINT=http${SECURE:+s}://${HOST_ADDRESS}/_love
       - ACCOUNTS_URL=http${SECURE:+s}://${HOST_ADDRESS}/_accounts
-      - ACCOUNTS_URL_INTERNAL=http://account:3000
+      - ACCOUNTS_URL_INTERNAL=https://accounts.coolify.grwebdevs.com
       - REKONI_URL=http${SECURE:+s}://${HOST_ADDRESS}/_rekoni
       - CALENDAR_URL=http${SECURE:+s}://${HOST_ADDRESS}/_calendar
       - GMAIL_URL=http${SECURE:+s}://${HOST_ADDRESS}/_gmail
@@ -197,7 +197,7 @@ services:
       - ELASTIC_INDEX_NAME=huly_storage_index
       - STORAGE_CONFIG=minio|minio?accessKey=minioadmin&secretKey=minioadmin
       - REKONI_URL=http://rekoni:4004
-      - ACCOUNTS_URL=http://account:3000
+      - ACCOUNTS_URL=https://accounts.coolify.grwebdevs.com
       - STATS_URL=http://stats:4900
       - QUEUE_CONFIG=redpanda:9092
     restart: unless-stopped
