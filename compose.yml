@@ -169,7 +169,7 @@ services:
       - SERVER_PORT=8080
       - SERVER_SECRET=${SECRET}
       - LOVE_ENDPOINT=http${SECURE:+s}://${HOST_ADDRESS}/_love
-      - ACCOUNTS_URL=http${SECURE:+s}://${HOST_ADDRESS}/_accounts
+      - ACCOUNTS_URL=https://accounts.coolify.grwebdevs.com
       - ACCOUNTS_URL_INTERNAL=https://accounts.coolify.grwebdevs.com
       - REKONI_URL=http${SECURE:+s}://${HOST_ADDRESS}/_rekoni
       - CALENDAR_URL=http${SECURE:+s}://${HOST_ADDRESS}/_calendar
